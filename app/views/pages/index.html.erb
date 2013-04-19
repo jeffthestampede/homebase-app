@@ -1,36 +1,30 @@
 
-<a href="<%= @results[0]["links"]["web"]["href"] %>"><%= @results[0]["headline"] %></a>
+
+
+<% @results.each do |result| %>
+
+<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
 <br>
-<a href="<%= @results[1]["links"]["web"]["href"] %>"><%= @results[1]["headline"] %></a>
-<br>
-<a href="<%= @results[2]["links"]["web"]["href"] %>"><%= @results[2]["headline"] %></a>
-<br>
-<a href="<%= @results[3]["links"]["web"]["href"] %>"><%= @results[3]["headline"] %></a>
-<br>
-<a href="<%= @results[4]["links"]["web"]["href"] %>"><%= @results[4]["headline"] %></a>
+<% end %>
 
 <br>
 <br>
 
-<a href="<%= @results2[0]["links"]["web"]["href"] %>"><%= @results2[0]["headline"] %></a>
+<% @results2.each do |result| %>
+
+<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
 <br>
-<a href="<%= @results2[1]["links"]["web"]["href"] %>"><%= @results2[1]["headline"] %></a>
-<br>
-<a href="<%= @results2[2]["links"]["web"]["href"] %>"><%= @results2[2]["headline"] %></a>
-<br>
-<a href="<%= @results2[3]["links"]["web"]["href"] %>"><%= @results2[3]["headline"] %></a>
-<br>
-<a href="<%= @results2[4]["links"]["web"]["href"] %>"><%= @results2[4]["headline"] %></a>
+<% end %>
 
 <br>
 <br>
 
-<a href="<%= @results3[0]["links"]["web"]["href"] %>"><%= @results3[0]["headline"] %></a>
+<% @results3.each do |result| %>
+
+<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
 <br>
-<a href="<%= @results3[1]["links"]["web"]["href"] %>"><%= @results3[1]["headline"] %></a>
+<% end %>
+
 <br>
-<a href="<%= @results3[2]["links"]["web"]["href"] %>"><%= @results3[2]["headline"] %></a>
 <br>
-<a href="<%= @results3[3]["links"]["web"]["href"] %>"><%= @results3[3]["headline"] %></a>
-<br>
-<a href="<%= @results3[4]["links"]["web"]["href"] %>"><%= @results3[4]["headline"] %></a>
+
