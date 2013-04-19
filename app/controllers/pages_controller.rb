@@ -3,29 +3,21 @@
 class PagesController < ApplicationController
 
   def index
-    @team1 = current_user.team1
-    @team2 = current_user.team2
-    @team3 = current_user.team3
-
-    @x = Team.where(:name => "#{@team1}")
+   
+    @team1 = (Team.where(:name => "#{current_user.team1}").as_json)[0]
+    @team2 = (Team.where(:name => "#{current_user.team2}").as_json)[0]
+    @team3 = (Team.where(:name => "#{current_user.team3}").as_json)[0]
 
     
-    
 
+    file = open("http://api.espn.com/v1/sports/#{@team1["sport"]}/#{@team1["league"]}/teams/#{@team1["espn_id"]}/news?apikey=mq6g97278vj2y36a2c4kdheb")
+    @results = JSON.load(file.read)["headlines"]
 
+    file2 = open("http://api.espn.com/v1/sports/#{@team2["sport"]}/#{@team2["league"]}/teams/#{@team2["espn_id"]}/news?apikey=mq6g97278vj2y36a2c4kdheb")
+    @results2 = JSON.load(file2.read)["headlines"]
 
-
-
-    # file = open("http://api.espn.com/v1/sports/#{@x.sport}/#{@x.league}/teams/#{@x.espn_id}/news?apikey=mq6g97278vj2y36a2c4kdheb")
-    # @results = JSON.load(file.read)["headlines"]
-
-    # file2 = open("http://api.espn.com/v1/sports/basketball/nba/teams/13/news?apikey=mq6g97278vj2y36a2c4kdheb")
-    # @results2 = JSON.load(file2.read)["headlines"]
-
-    # file3 = open("http://api.espn.com/v1/sports/football/nfl/teams/24/news?apikey=mq6g97278vj2y36a2c4kdheb")
-    # @results3 = JSON.load(file3.read)["headlines"]
-
-
+    file3 = open("http://api.espn.com/v1/sports/#{@team3["sport"]}/#{@team3["league"]}/teams/#{@team3["espn_id"]}/news?apikey=mq6g97278vj2y36a2c4kdheb")
+    @results3 = JSON.load(file3.read)["headlines"]
 
   end
 
