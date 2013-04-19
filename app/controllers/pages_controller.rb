@@ -2,7 +2,7 @@
 
 class PagesController < ApplicationController
 
-  def index
+  def results
    
     @team1 = (Team.where(:name => "#{current_user.team1}").as_json)[0]
     @team2 = (Team.where(:name => "#{current_user.team2}").as_json)[0]
@@ -18,6 +18,10 @@ class PagesController < ApplicationController
 
     file3 = open("http://api.espn.com/v1/sports/#{@team3["sport"]}/#{@team3["league"]}/teams/#{@team3["espn_id"]}/news?apikey=mq6g97278vj2y36a2c4kdheb")
     @results3 = JSON.load(file3.read)["headlines"]
+
+  end
+
+  def index
 
   end
 

@@ -1,0 +1,32 @@
+
+
+<%= current_user.team1 %> News <br>
+<% @results.each do |result| %>
+
+<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
+<br>
+<% end %>
+
+<br>
+<br>
+
+<%= current_user.team2 %> News <br>
+<% @results2.each do |result| %>
+
+<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
+<br>
+<% end %>
+
+<br>
+<br>
+
+<%= current_user.team3 %> News <br>
+<% @results3.each do |result| %>
+
+<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
+<br>
+<% end %>
+
+<br>
+<br>
+
