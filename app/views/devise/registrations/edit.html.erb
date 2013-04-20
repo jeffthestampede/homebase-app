@@ -19,14 +19,17 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
 
-  <div><%= f.label :team1 %><br />
-  <%= f.text_field :team1, :autofocus => true %></div>
+  <div><%= f.label "Favorite Team 1" %><br />
+  <%= f.select(:team1, options_for_select(Team.all.map{|u| u.name})) %>
+  </div>
 
-  <div><%= f.label :team2 %><br />
-  <%= f.text_field :team2, :autofocus => true %></div>
+  <div><%= f.label "Favorite Team 2" %><br />
+  <%= f.select(:team2, options_for_select(Team.all.map{|u| u.name})) %>
+  </div>
 
-  <div><%= f.label :team3 %><br />
-  <%= f.text_field :team3, :autofocus => true %></div>
+  <div><%= f.label "Favorite Team 3" %><br />
+  <%= f.select(:team3, options_for_select(Team.all.map{|u| u.name})) %>
+  </div>
 
   <div><%= f.submit "Update" %></div>
 <% end %>
