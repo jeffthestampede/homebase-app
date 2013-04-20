@@ -1,34 +1,29 @@
 
+<div class="row-fluid">
+  <div class="span4">
+    <h1><%= current_user.team1 %> News </h1><br>
+    <% @results.each do |result| %>
+      <ul>
+        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+      </ul>
+    <% end %>
+  </div>
+  <div class="span4">
+    <h1><%= current_user.team2 %> News </h1> <br>
+    <% @results2.each do |result| %>
+      <ul>
+        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+      </ul>
+    <% end %>    
+  </div>
+  <div class="span4">
+    <h1><%= current_user.team3 %> News </h1> <br>
+    <% @results3.each do |result| %>
+      <ul>
+        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+      </ul>
+    <% end %>
+  </div>
+</div>
 
-<br>
-<br>
-<%= current_user.team1 %> News <br>
-<% @results.each do |result| %>
-
-<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
-<br>
-<% end %>
-
-<br>
-<br>
-
-<%= current_user.team2 %> News <br>
-<% @results2.each do |result| %>
-
-<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
-<br>
-<% end %>
-
-<br>
-<br>
-
-<%= current_user.team3 %> News <br>
-<% @results3.each do |result| %>
-
-<a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a>
-<br>
-<% end %>
-
-<br>
-<br>
 
