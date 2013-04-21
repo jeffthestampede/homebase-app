@@ -2,29 +2,50 @@
 <div class="row-fluid">
   <div class="span4">
     <h1><%= current_user.team1 %> News </h1><br>
-    <%=image_tag "#{Team.where(:name => "#{current_user.team1}").first.league}#{Team.where(:name => "#{current_user.team1}").first.espn_id}.jpg", {:width => 85}%>
+    <div class="teamlogo">
+      <%=image_tag "#{Team.where(:name => "#{current_user.team1}").first.league}#{Team.where(:name => "#{current_user.team1}").first.espn_id}.jpg", {:width => 85}%>
+    </div>
     <% @results.each do |result| %>
       <ul>
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
     <% end %>
+    <% @tresults["results"].first(5).each do |result| %>
+      <div class="twittersearch">
+        <img class="profileimg" src="<%= result["profile_image_url"] %>"><%= result["text"] %>
+      </div>
+    <% end %>
   </div>
   <div class="span4">
     <h1><%= current_user.team2 %> News </h1> <br>
+    <div class="teamlogo">
     <%=image_tag "#{Team.where(:name => "#{current_user.team2}").first.league}#{Team.where(:name => "#{current_user.team2}").first.espn_id}.jpg", {:width => 85}%>
+    </div>
     <% @results2.each do |result| %>
       <ul>
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
-    <% end %>    
+    <% end %>
+    <% @tresults2["results"].first(5).each do |result| %>
+      <div class="twittersearch">
+        <img class="profileimg" src="<%= result["profile_image_url"] %>"><%= result["text"] %>
+      </div>
+    <% end %>
   </div>
   <div class="span4">
     <h1><%= current_user.team3 %> News </h1> <br>
+    <div class="teamlogo">
     <%=image_tag "#{Team.where(:name => "#{current_user.team3}").first.league}#{Team.where(:name => "#{current_user.team3}").first.espn_id}.jpg", {:width => 85}%>
+    </div>
     <% @results3.each do |result| %>
       <ul>
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
+    <% end %>
+    <% @tresults3["results"].first(5).each do |result| %>
+      <div class="twittersearch">
+        <img class="profileimg" src="<%= result["profile_image_url"] %>"><%= result["text"] %>
+      </div>
     <% end %>
   </div>
 </div>
