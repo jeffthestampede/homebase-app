@@ -10,11 +10,9 @@
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
     <% end %>
-    <% @tresults["results"].first(5).each do |result| %>
-      <div class="twittersearch">
-        <img class="profileimg" src="<%= result["profile_image_url"] %>"><%= result["text"] %>
-      </div>
-    <% end %>
+    <a class="twitter-timeline" href="https://twitter.com/NBA" data-widget-id="325917294180044800">Tweets by @NBA</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
   </div>
   <div class="span4">
     <h1><%= current_user.team2 %> News </h1> <br>
@@ -26,11 +24,12 @@
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
     <% end %>
-    <% @tresults2["results"].first(5).each do |result| %>
-      <div class="twittersearch">
-        <img class="profileimg" src="<%= result["profile_image_url"] %>"><%= result["text"] %>
-      </div>
-    <% end %>
+    <a class="twitter-timeline" href="https://twitter.com/NBA" data-widget-id="325918078791720961">Tweets by @NBA</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+    
   </div>
   <div class="span4">
     <h1><%= current_user.team3 %> News </h1> <br>
@@ -42,11 +41,12 @@
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
     <% end %>
-    <% @tresults3["results"].first(5).each do |result| %>
-      <div class="twittersearch">
-        <img class="profileimg" src="<%= result["profile_image_url"] %>"><%= result["text"] %>
-      </div>
-    <% end %>
+    <a class="twitter-timeline" href="https://twitter.com/nfl" data-widget-id="325918314356416512">Tweets by @nfl</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+  
   </div>
 </div>
 

@@ -7,6 +7,8 @@ Homebase::Application.routes.draw do
 
   get '/results' => 'pages#results'
 
+  match 'user_root' => 'pages#results'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

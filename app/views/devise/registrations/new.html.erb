@@ -1,5 +1,4 @@
 <h2>Sign up</h2>
-
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -12,14 +11,14 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-    <div><%= f.label :team1 %><br />
-  <%= f.text_field :team1, :autofocus => true %></div>
+    <div><%= f.label "Favorite MLB Team" %><br />
+  <%= f.select(:team1, options_for_select((Team.where(:league => "mlb").map{|u| u.name}).sort)) %></div>
 
-  <div><%= f.label :team2 %><br />
-  <%= f.text_field :team2, :autofocus => true %></div>
+  <div><%= f.label "Favorite NBA Team" %><br />
+  <%= f.select(:team2, options_for_select((Team.where(:league => "nba").map{|u| u.name}).sort)) %></div>
 
-  <div><%= f.label :team3 %><br />
-  <%= f.text_field :team3, :autofocus => true %></div>
+  <div><%= f.label "Favorite NFL Team" %><br />
+  <%= f.select(:team3, options_for_select((Team.where(:league => "nfl").map{|u| u.name}).sort)) %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
