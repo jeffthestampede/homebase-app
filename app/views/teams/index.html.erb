@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Sport</th>
     <th>League</th>
     <th>Name</th>
@@ -13,6 +14,7 @@
 
 <% @teams.each do |team| %>
   <tr>
+    <td><%= team.id %></td>
     <td><%= team.sport %></td>
     <td><%= team.league %></td>
     <td><%= team.name %></td>
