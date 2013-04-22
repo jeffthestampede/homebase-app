@@ -13,17 +13,19 @@
       <h6>News</h6>
       <% @results1.each do |result| %>
         <ul>
-          <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+          <li class="resultslist"><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
         </ul>
       <% end %>
     </div>
     <br>
-    <h6>News Around the MLB</h6>
-    <% @league_results1.each do |result| %>
-      <ul>
-        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
-      </ul>
-    <% end %>
+    <div class="leaguenews">
+      <h6>News Around the MLB</h6>
+      <% @league_results1.each do |result| %>
+        <ul>
+          <li class="resultslist"><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+        </ul>
+      <% end %>
+    </div>
     <br>
     <h6>MLB Twitter Feed</h6>
     <a class="twitter-timeline" href="https://twitter.com/NBA" data-widget-id="325917294180044800">Tweets by @NBA</a>
@@ -42,17 +44,19 @@
       <h6>News</h6>
       <% @results2.each do |result| %>
         <ul>
-          <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+          <li class="resultslist"><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
         </ul>
       <% end %>
     </div>
     <br>
-    <h6>News Around the NBA</h6>
-    <% @league_results2.each do |result| %>
-      <ul>
-        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
-      </ul>
-    <% end %>
+    <div class="leaguenews">
+      <h6>News Around the NBA</h6>
+      <% @league_results2.each do |result| %>
+        <ul>
+          <li class="resultslist"><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+        </ul>
+      <% end %>
+    </div>
     <br>
     <h6>NBA Twitter Feed</h6>
     <a class="twitter-timeline" href="https://twitter.com/NBA" data-widget-id="325918078791720961">Tweets by @NBA</a>
@@ -72,17 +76,19 @@
     <h6>News</h6>
       <% @results3.each do |result| %>
         <ul>
-          <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+          <li class="resultslist"><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
         </ul>
       <% end %>
     </div>
     <br>
-    <h6>News Around the NFL</h6>
-    <% @league_results3.each do |result| %>
-      <ul>
-        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
-      </ul>
-    <% end %>
+    <div class="leaguenews">
+      <h6>News Around the NFL</h6>
+      <% @league_results3.each do |result| %>
+        <ul>
+          <li class="resultslist"><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+        </ul>
+      <% end %>
+    </div>
     <br>
     <h6>NFL Twitter Feed</h6>
     <a class="twitter-timeline" href="https://twitter.com/nfl" data-widget-id="325918314356416512">Tweets by @nfl</a>

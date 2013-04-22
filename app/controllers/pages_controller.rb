@@ -3,7 +3,7 @@
 class PagesController < ApplicationController
 
   def results
-   
+    
     @team1 = (Team.where(:name => "#{current_user.team1}")).first
     @team2 = (Team.where(:name => "#{current_user.team2}")).first
     @team3 = (Team.where(:name => "#{current_user.team3}")).first

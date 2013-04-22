@@ -1,26 +1,28 @@
+<div class="span6 offset2 hero-unit">
 <h2>Sign up</h2>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+  <div><%= f.label :email %>
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
+  <div><%= f.label :password %>
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %></div>
 
-    <div><%= f.label "Favorite MLB Team" %><br />
+    <div><%= f.label "Favorite MLB Team" %>
   <%= f.select(:team1, options_for_select((Team.where(:league => "mlb").map{|u| u.name}).sort)) %></div>
 
-  <div><%= f.label "Favorite NBA Team" %><br />
+  <div><%= f.label "Favorite NBA Team" %>
   <%= f.select(:team2, options_for_select((Team.where(:league => "nba").map{|u| u.name}).sort)) %></div>
 
-  <div><%= f.label "Favorite NFL Team" %><br />
+  <div><%= f.label "Favorite NFL Team" %>
   <%= f.select(:team3, options_for_select((Team.where(:league => "nfl").map{|u| u.name}).sort)) %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

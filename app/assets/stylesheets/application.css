@@ -32,8 +32,7 @@ ul.hmenu li {
 }
 
 .span4 {
-  border-top: 5px solid black;
-  border-radius: 2px;
+  border-top: 3px solid black;
   margin: 10px 0;
   padding: 8px;  
 }
@@ -53,8 +52,8 @@ ul.hmenu li {
   text-align: center;
 }
 
-li {
-  list-style: square;
+.resultslist {
+  list-style: circle;
   margin-top: -10px;
 }
 
@@ -63,7 +62,7 @@ li {
 }
 
 .teamname {
-  font-family: 'Righteous', cursive;
+  font-family: 'Rosario', sans-serif;
   text-align: center;
 }
 
@@ -74,3 +73,31 @@ li {
 h5 {
   font-size: 25px !important;
 }
+
+.indexpage>p {
+  font-size: 40px;
+  font-family: 'Rosario', sans-serif; 
+}
+
+.indexpage {
+  text-align: center;
+  margin-top: 60px;
+  list-style: none;
+}
+
+
+.teamnews {
+  height: 410px;
+}
+
+.leaguenews {
+  height: 360px;
+}
+
+.footer {
+  text-align: center;
+}
+
+
+
+
