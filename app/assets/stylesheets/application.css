@@ -32,9 +32,9 @@ ul.hmenu li {
 }
 
 .span4 {
-  border: 2px solid black;
+  border-top: 5px solid black;
+  border-radius: 2px;
   margin: 10px 0;
-  border-radius: 3px;
   padding: 8px;  
 }
 
@@ -54,5 +54,23 @@ ul.hmenu li {
 }
 
 li {
-  list-style: katakana;
+  list-style: square;
+  margin-top: -10px;
+}
+
+.colheader {
+  height: 170px;
+}
+
+.teamname {
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+
+.stats:hover {
+  color: black;
+}
+
+h5 {
+  font-size: 25px !important;
 }

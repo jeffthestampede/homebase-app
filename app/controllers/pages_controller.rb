@@ -8,7 +8,6 @@ class PagesController < ApplicationController
     @team2 = (Team.where(:name => "#{current_user.team2}")).first
     @team3 = (Team.where(:name => "#{current_user.team3}")).first
 
-
     file1 = open("http://api.espn.com/v1/sports/#{@team1.sport}/#{@team1.league}/teams/#{@team1.espn_id}/news?apikey=mq6g97278vj2y36a2c4kdheb")
     @results1 = JSON.load(file1.read)["headlines"]
 

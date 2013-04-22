@@ -20,15 +20,15 @@
   <%= f.password_field :current_password %></div>
 
   <div><%= f.label "Favorite NBA Team" %><br />
-  <%= f.select(:team1, options_for_select((Team.where(:league => "mlb").map{|u| u.name}).sort), :selected => "#{current_user.team1}") %>
+  <%= f.select(:team1, options_for_select((Team.where(:league => "mlb").map{|u| [u.name]}).sort, :selected => "#{current_user.team1}")) %>
   </div>
 
   <div><%= f.label "Favorite MLB Team" %><br />
-  <%= f.select(:team2, options_for_select((Team.where(:league => "nba").map{|u| u.name}).sort), :selected => "#{current_user.team2}") %>
+  <%= f.select(:team2, options_for_select((Team.where(:league => "nba").map{|u| [u.name]}).sort, :selected => "#{current_user.team2}")) %>
   </div>
 
   <div><%= f.label "Favorite NFL Team" %><br />
-  <%= f.select(:team3, options_for_select((Team.where(:league => "nfl").map{|u| u.name}).sort), :selected => "#{current_user.team3}") %>
+  <%= f.select(:team3, options_for_select((Team.where(:league => "nfl").map{|u| [u.name]}).sort, :selected => "#{current_user.team3}")) %>
   </div>
 
   <div><%= f.submit "Update" %></div>

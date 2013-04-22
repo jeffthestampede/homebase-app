@@ -1,86 +1,93 @@
 
 <div class="row-fluid">
   <div class="span4">
-    <h1><%= current_user.team1 %> News </h1><br>
-    <div class="teamlogo">
-      <%=image_tag "#{Team.where(:name => "#{current_user.team1}").first.league}#{Team.where(:name => "#{current_user.team1}").first.espn_id}.jpg", {:width => 85}%>
+    <div class="colheader">
+      <div class="teamname"><h5><%= current_user.team1 %></h5></div><br>
+      <div class="teamlogo">
+        <%=image_tag "#{Team.where(:name => "#{current_user.team1}").first.league}#{Team.where(:name => "#{current_user.team1}").first.espn_id}.jpg", {:width => 85}%>
+      </div>
     </div>
 
-    <a href="<%= @team_info_results1 %>"><%= current_user.team1 %> Info</a>
-
-    <% @results1.each do |result| %>
-      <ul>
-        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
-      </ul>
-    <% end %>
+    <a class="stats" href="<%= @team_info_results1 %>"><h6>Box Scores and Stats</h6></a>
+    <div class="teamnews">
+      <h6>News</h6>
+      <% @results1.each do |result| %>
+        <ul>
+          <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+        </ul>
+      <% end %>
+    </div>
     <br>
-    <h3>News Around the MLB</h3>
+    <h6>News Around the MLB</h6>
     <% @league_results1.each do |result| %>
       <ul>
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
     <% end %>
-    
-
+    <br>
+    <h6>MLB Twitter Feed</h6>
     <a class="twitter-timeline" href="https://twitter.com/NBA" data-widget-id="325917294180044800">Tweets by @NBA</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
   </div>
+  
   <div class="span4">
-    <h1><%= current_user.team2 %> News </h1> <br>
-    <div class="teamlogo">
-    <%=image_tag "#{Team.where(:name => "#{current_user.team2}").first.league}#{Team.where(:name => "#{current_user.team2}").first.espn_id}.jpg", {:width => 85}%>
+    <div class="colheader">
+      <div class="teamname"><h5><%= current_user.team2 %></h5></div> <br>
+      <div class="teamlogo">
+      <%=image_tag "#{Team.where(:name => "#{current_user.team2}").first.league}#{Team.where(:name => "#{current_user.team2}").first.espn_id}.jpg", {:width => 85}%>
+      </div>
     </div>
-    <a href="<%= @team_info_results %>"><%= current_user.team2 %> Info</a>
-    <% @results2.each do |result| %>
-      <ul>
-        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
-      </ul>
-    <% end %>
-
-     <br>
-    <h3>News Around the NBA</h3>
+    <a class="stats" href="<%= @team_info_results2 %>"><h6>Box Scores and Stats</h6></a>
+    <div class="teamnews">
+      <h6>News</h6>
+      <% @results2.each do |result| %>
+        <ul>
+          <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+        </ul>
+      <% end %>
+    </div>
+    <br>
+    <h6>News Around the NBA</h6>
     <% @league_results2.each do |result| %>
       <ul>
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
     <% end %>
-
+    <br>
+    <h6>NBA Twitter Feed</h6>
     <a class="twitter-timeline" href="https://twitter.com/NBA" data-widget-id="325918078791720961">Tweets by @NBA</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-
-    
+    <br>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>   
   </div>
+  
   <div class="span4">
-    <h1><%= current_user.team3 %> News </h1> <br>
-    <div class="teamlogo">
-    <%=image_tag "#{Team.where(:name => "#{current_user.team3}").first.league}#{Team.where(:name => "#{current_user.team3}").first.espn_id}.jpg", {:width => 85}%>
+    <div class="colheader">
+      <div class="teamname"><h5><%= current_user.team3 %></h5></div> <br>
+      <div class="teamlogo">
+      <%=image_tag "#{Team.where(:name => "#{current_user.team3}").first.league}#{Team.where(:name => "#{current_user.team3}").first.espn_id}.jpg", {:width => 85}%>
+      </div>
     </div>
-    <a href="<%= @team_info_results %>"><%= current_user.team3 %> Info</a>
-    <% @results3.each do |result| %>
-      <ul>
-        <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
-      </ul>
-    <% end %>
-
+    <a class="stats" href="<%= @team_info_results3 %>"><h6>Box Scores and Stats</h6></a>
+    <div class="teamnews">
+    <h6>News</h6>
+      <% @results3.each do |result| %>
+        <ul>
+          <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
+        </ul>
+      <% end %>
+    </div>
     <br>
-    <h3>News Around the NFL</h3>
-    <br>
+    <h6>News Around the NFL</h6>
     <% @league_results3.each do |result| %>
       <ul>
         <li><a href="<%= result["links"]["web"]["href"] %>"><%= result["headline"] %></a></li>
       </ul>
     <% end %>
-
-
+    <br>
+    <h6>NFL Twitter Feed</h6>
     <a class="twitter-timeline" href="https://twitter.com/nfl" data-widget-id="325918314356416512">Tweets by @nfl</a>
+    <br>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-
-  
   </div>
 </div>
 
